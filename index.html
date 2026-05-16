@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noiré is a luxury handbag brand offering timeless designs, premium craftsmanship, and limited pieces for modern women."/>
+    <meta name="keywords" content="Noiré, luxury handbag brand, timeless handbags, premium craftsmanship, limited edition bags, modern women fashion, elegant handbags, exclusive bags, designer handbags"/>
+    <meta name="author" content="Project 1 Tugas Akhir Pemrograman Web"/>
+
+    <title>Noiré | Luxury Timeless Handbags for Modern Women</title>
+
+    <style>
+        #modalpromo{
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100dvw;
+            height: 100dvh;
+            background-color: rgba(0,0,0,0.45);
+        }
+
+        body{
+            width: 100%;
+            margin: 0;
+        }
+
+        header > img{
+            position: relative;
+            /* untuk bikin isi nav ada diatas gambar, kasi position rel*/
+        }
+
+        header nav{
+            position: absolute;
+            top: 35px;
+            left: 40px;
+            right: 40px;
+            /* nilai left dan rightnya harus sama */
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navkiri{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .navkiri a, .navkanan a{
+            text-decoration: none;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding-left: 5px;
+        }
+
+        .navmid{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            /* biar posisi logo ditengah */
+        }
+
+        .headercaption{
+            position: absolute;
+            top: 65%;
+            left: 0;
+            right: 0;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .capt1{
+            color: white;
+            font-size: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .capt2{
+            text-align: center;
+        }
+
+        .capt2 a{
+            color: white;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: color 0.5s, letter-spacing 0.5s;
+        }
+
+        .capt2 a:hover{
+            color: rgb(138, 92, 22);
+            letter-spacing: 2px;
+        }
+
+        .noire{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .catalog{
+            display: flex;
+            gap: 9px;
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+
+        .catalog h3{
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: normal;
+
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+
+            transition: color 0.5s;
+        }
+
+        .catalog h3:hover{
+            color: rgb(138, 92, 22);
+        }
+
+        .catalog p{
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 5px;
+            margin-top: 0;
+        }
+
+        .coll{
+            display: flex;
+            margin-left: 14px;
+            gap: 9px;
+        }
+
+        .collection h2{
+            font-size: 26px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 75px;
+            margin-left: 14px;
+        }
+
+        .collection p{
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: color 0.5s;
+        }
+
+        .collection p:hover{
+            color: rgb(138, 92, 22);
+        }
+
+        .showall{
+            text-align: center;
+        }
+
+        .showall a{
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            transition: color 0.5s, letter-spacing 0.5s, font-weight 0.5s, font-size 0.5s;
+        }
+
+        .showall a:hover{
+            color: rgb(138, 92, 22);
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .pictbawah{
+            margin-top: 40px;
+        }
+
+        .footeratas{
+            display: flex;
+            flex-direction: row;
+
+            gap: 100px;
+            margin-bottom: 30px;
+            letter-spacing: 0.3px;
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+
+        .footerkiri{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .email form{
+            width: 300px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .email input{
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+
+        .email button{
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            cursor: pointer;
+            padding-bottom: 12px;
+            margin-left: 85px;
+        }
+
+        .company, .terms{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .footermid h5, .footerkanan h5{
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .footermid a, .footerkanan a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+        }
+
+        .footerbawah{
+            display: flex;
+            align-items: center;
+            border-top: 1px solid black;
+        }
+
+        .fbkiri{
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+
+        .fbkanan{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            margin-left: auto;
+            margin-right: 30px;
+            gap: 10px;
+            border-left: 1px solid black;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section id="modalpromo" role="dialog" aria-modal="true" aria-labelledby="promo-title">
+        <div
+            style="
+                background-color: white;
+                margin: 13% auto;
+                padding: 35px 30px;
+                width: 280px;
+
+                text-align: center;
+                border-radius: 20px;
+                position: relative;
+
+                box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+            "
+        >
+
+        <span
+            onclick="closePromo()"
+            style="
+                position: absolute;
+                right: 18px;
+                top: 12px;
+                cursor: pointer;
+                font-size: 22px;
+            "
+            >&times;
+        </span>
+
+        <h2 style="
+            color: rgb(138, 92, 22);
+            font-size: 22px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            ">Exclusive Offer</h2>
+
+        <p style="
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 22px;
+            color: rgb(60,60,60);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            ">Get 20% off your first purchase from Noiré's latest handbag collection.</p>
+        
+        <button
+            onclick="closePromo()"
+            style="
+                background: rgb(138, 92, 22);
+                color: white;
+                border: none;
+                padding: 11px 24px;
+                border-radius: 30px;
+                cursor: pointer;
+                font-size: 13px;
+            "
+        >Shop Now</button>
+
+        </div>
+    </section>
+    
+    <header>
+        <img src="image/headerpict.jpg" alt="Noiré luxury handbag collection" width="100%">
+        
+        <nav>
+            <div class="navkiri">
+                <div class="menu">
+                    <img src="image/twobar.jpg" alt="Menu" height="8">
+                    <a href="/menu.html">Menu</a>
+                </div>
+
+                <div class="search">
+                    <img src="image/search.png" alt="Search" height="16">
+                    <a href="/search/html">Search</a>
+                </div>
+            </div>
+            
+            <div class="navmid">
+                <div class="logo">
+                    <img src="image/logonoire.png" alt="Logo Noire" width="170" height="40">
+                </div>
+            </div>
+
+            <div class="navkanan">
+                <div class="contact">
+                    <a href="/contact.html">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="headercaption">
+            <div class="capt1">
+                <h1>Timeless by Nature</h1>
+            </div>
+
+            <div class="capt2">
+                <a href="/collection.html">EXPLORE COLLECTION</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="noire">
+            <p>Soft textures and sculpted form come together in perfect balance,<br>reflecting natural elegance in Noiré's latest collection.</p>
+        </section>
+
+        <section class="catalog">
+            <article class="catalog1">
+                <img src="image/lumiere.jpg" alt="Noiré Lumiere Luxury Handbag" width="240" height="300" loading="lazy">
+                <h3>Lumiere Bag</h3>
+                <p>Rp 6.084.000 IDR</p>
+            </article>
+
+            <article class="catalog2">
+                <img src="image/emera.jpg" alt="Noiré Emera Luxury Handbag" width="240" height="300" loading="lazy">
+                <h3>Emera Bag</h3>
+                <p>Rp 8.950.000 IDR</p>
+            </article>
+
+            <article class="catalog3">
+                <img src="image/celora.jpg" alt="Noiré Celora Luxury Handbag" width="240" height="300" loading="lazy">
+                <h3>Celora Bag</h3>
+                <p>Rp 10.870.000 IDR</p>
+            </article>
+
+            <article class="catalog4">
+                <img src="image/hyun.jpg" alt="Noiré Hyun Luxury Handbag" width="240" height="300" loading="lazy">
+                <h3>Hyun Bag</h3>
+                <p>Rp 6.560.000 IDR</p>
+            </article>
+
+            <article class="catalog1">
+                <img src="image/poudre.jpg" alt="Noiré Poudre Luxury Handbag" width="240" height="300" loading="lazy">
+                <h3>Poudre Bag</h3>
+                <p>Rp 5.190.000 IDR</p>
+            </article>
+        </section>
+
+        <section class="showall">
+                <a href="/products.html">SHOW ALL</a>
+        </section>
+
+        <section class="collection">
+            <h2>The Noiré Collection</h2>
+
+            <div class="coll">
+                <article class="coll1">
+                    <img src="image/sablecoll.jpg" alt="Sable Collection" height="200">
+                    <p>Sable Collection</p>
+                </article>
+
+                <article class="coll2">
+                    <img src="image/lunecoll.jpg" alt="Lune Collection" height="200">
+                    <p>Lune Collection</p>
+                </article>
+
+                <article class="coll3">
+                    <img src="image/ateliercoll.jpg" alt="Atelier Collection" height="200">
+                    <p>Atelier Collection</p>
+                </article>
+
+                <article class="coll4">
+                    <img src="image/solenecoll.jpg" alt="Solene Collection" height="200">
+                    <p>Solene Collection</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="pictbawah">
+            <img src="image/mainlune.jpg" alt="Lune Bag" width="100%">
+        </section>
+    </main>
+
+    <footer>
+        <section class="footeratas">
+            <div class="footerkiri">
+                <div class="email">
+                    <form>
+                        <input type="email" placeholder="Insert your e-mail address *" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+
+            <nav class="footermid">
+                <h5>COMPANY</h5>
+
+                <div class="company">
+                    <a href="/about.html">About Noiré</a>
+                    <a href="/craftman.html">Our Craftmanship</a>
+                    <a href="/sustain.html">Sustainability</a>
+                    <a href="/careers.html">Careers</a>
+                    <a href="/contact.html">Contact Us</a>
+                </div>
+            </nav>
+
+            <nav class="footerkanan">
+                <h5>LEGAL TERMS AND CONDITIONS</h5>
+
+                <div class="terms">
+                    <a href="/notice.html">Legal Notice</a>
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/policy.html">Cookie Policy</a>
+                    <a href="/cookie.html">Cookie Setting</a>
+                    <a href="/sitemap.html">Sitemap</a>
+                </div>
+            </nav>
+        </section>
+
+        <section class="footerbawah">
+            <div class="fbkiri">
+                <p>©NOIRÉ 2026 | All rights reserved</p>
+            </div>
+
+            <div class="fbkanan">
+                <img src="image/loc.jpg" alt="Location" height="18">
+                <p>Store Locator</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("modalpromo").style.display = "block";
+        }, 2000);
+
+        function closePromo() {
+            document.getElementById("modalpromo").style.display = "none";
+        }
+    </script>
+
+</html>
