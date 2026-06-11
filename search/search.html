@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH</title>
+
+<style>
+
+    body{
+        
+            width: 100%;
+            margin: 0;
+            height: 390dvh;
+        }
+
+
+    header nav{
+            position: absolute;
+            top: 35px;
+            left: 40px;
+            right: 40px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+    }
+
+    .navmid{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            /* biar posisi logo ditengah */
+        }
+/* 
+        .navkiri{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+        } */
+
+        .navkiri a, .navkanan a{
+          
+            font-size: 14px;
+            padding-left: 5px;
+        }
+
+        .caption1{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+     
+        
+        .catalog{
+            display: flex;
+            gap: 90px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+
+        .catalog h3{
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: normal;
+
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+
+            transition: color 0.5s;
+        }
+
+        .catalog h3:hover{
+            color: rgb(138, 92, 22);
+        }
+
+        .catalog p{
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 5px;
+            margin-top: 0;
+        }
+
+
+
+        .cat2, .cat3, .cat4, .cat5{
+
+            display: flex;
+            gap: 90px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        
+        .cat2 h1, .cat3 h1, .cat4 h1, .cat5 h1{
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: normal;
+
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-bottom: 10px;
+
+            transition: color 0.5s;
+        }
+
+        .cat2 p, .cat3 p, .cat4 p, .cat5 p{
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 5px;
+            margin-top: 0;
+        }
+
+        .cat2 p:hover, .cat3 p:hover, .cat4 p:hover, .cat5 p:hover{
+            color: rgb(138, 92, 22);
+        }
+
+        .searchbar form{
+            width: 300px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .searchbar input{
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+
+        .searchbar button{
+            border: none;
+            background: transparent;
+            font-size: 20px;
+            cursor: pointer;
+            padding-bottom: 12px;
+            margin-left: 85px;
+        }
+
+        .searchbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        .search a{
+
+text-decoration: none;
+
+
+        }
+
+</style>
+
+
+
+
+</head>
+<body>
+    
+
+    <!-- <span
+    onclick="closePromo()"
+    style="
+        position: absolute;
+        right: 18px;
+        top: 12px;
+        cursor: pointer;
+        font-size: 22px;
+    "
+    >&times;
+</span>
+
+
+<button
+onclick="closePromo()"
+style="
+    background: rgb(138, 92, 22);
+    color: white;
+    border: none;
+    padding: 11px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 13px;
+"
+>Shop Now</button>
+
+ -->
+
+    </button>
+
+<nav>
+
+    
+  <div class="navmid">
+
+
+    <div class="searchbar">
+        
+        
+        <form>
+            <input type="search" placeholder="search what you'd like" required>
+            <button type="submit">→</button>
+        </form>
+    </div>
+                <!-- <div class="logo">
+                    <img src="image/searchbar.png" alt="search bar" width="400" height="100">
+                </div> -->
+</div>
+
+    <div class="navkanan">
+
+                    <div class="close">
+                        <img src="image/close.png" alt="search bar" width="90" height="100">
+                        
+                       <!-- <span onclick="closecontact()">
+
+                        ✕
+
+                       </span> -->
+
+                
+                       <!-- <div class="search">
+                        <img src="image/search.webp" alt="Search" height="16"> -->
+                        <!-- <a href="index.html">X</a> -->
+                    <!-- </div> --> 
+
+                    </div>
+                </div>
+
+                <!-- <div class="navkiri">
+                    <div class="menu">
+                        <img src="image/twobar.jpg" alt="Menu" height="8">
+                        <a href="menu.html">Menu</a>
+                    </div> -->
+
+
+            </nav> 
+            
+<main>
+
+    <section class="caption1">
+        <p>You may like these</p>
+    </section>
+
+    <section class="catalog">
+        <article class="catalog1a">
+            <img src="image/YML1.png" alt="Noiré Lumiere Luxury Handbag" width="240" height="300" loading="lazy">
+            <h3>Small Amazona 180 bag in soft calfskin</h3>
+            <p>Rp 10.830.000 IDR</p>
+        </article>
+
+        <article class="catalog1b">
+            <img src="image/tasorange.png" alt="Large Amazona 189 bag in soft calfskin" width="240" height="300" loading="lazy">
+            <h3>Large Amazona 189 bag in soft calfskin</h3>
+            <p>Rp 18.990.000 IDR</p>
+        </article>
+
+        <article class="catalog1c">
+            <img src="image/YML3.png" alt="Noiré Celora Luxury Handbag" width="240" height="300" loading="lazy">
+            <h3>Cala mini bag in melange raffia</h3>
+            <p>Rp 13.670.000 IDR</p>
+        </article>
+
+        <article class="catalog1d">
+            <img src="image/tashijau.png" alt="Loewe Bolso Gate Mini Bag" width="240" height="300" loading="lazy">
+            <h3>Cloudsolo sneaker</h3>
+            <p>Rp 60.560.000 IDR</p>
+        </article>
+        </section>
+
+        <section class="catalog2">
+            
+
+            <div class="cat2">
+                <article class="catalog2a">
+                    <img src="image/tasbotol.png" alt="The hammock in calfskin" width="240" height="300">
+                    <p>Loewe x Paula's Ibiza Puzzle Mini Leather Top-Handle Bag</p>
+                    <h1>Rp 15.670.000 IDR</h1>
+                    
+                    
+                </article>
+
+                <article class="catalog2b">
+                    <img src="image/tasb.png" alt="Squeeze back bag" width="240" height="300">
+                    <p>Cala Raffia Mini Bag</p>
+                    <h1> Rp 3.970.000 IDR</h1>  
+                </article>
+
+                <article class="catalog2c">
+                    <img src="image/taskuning.png" alt="Ibiza raffia bag" width="240" height="300">
+                    <p>Flamenco Leather Clutch Bag</p>
+                    <h1> Rp 10.000.000 IDR</h1>
+                </article>
+
+                <article class="catalog2d">
+                    <img src="image/tasputih.png" alt="Albers puzzle square bag" width="240" height="300">
+                    <p>Essential Camera Leather Cross-Body Bag</p>
+                    <h1> Rp 100.780.000 IDR</h1>
+                </article>
+            </div>
+        </section>
+
+
+
+
+        <section class="catalog3">
+            
+
+            <div class="cat3">
+                <article class="catalog3a">
+                    <img src="image/tas4.png" alt="Medium suade loop hobo" width="240" height="300">
+                    <p>Loewe x Paula's Ibiza Puzzle Mini Leather Top-Handle Bag</p>
+                    <h1>Rp 18.600.000 IDR</h1>
+                    
+                    
+                </article>
+
+                <article class="catalog3b">
+                    <img src="image/tas1.png" alt="Large featherlight puzzle bag" width="240" height="300">
+                    <p>Cala Raffia Mini Bag</p>
+                    <h1> Rp 23.970.000 IDR</h1>  
+                </article>
+
+                <article class="catalog3c">
+                    <img src="image/tas2.png" alt="Small flamenco bag" width="240" height="300">
+                    <p>Flamenco Leather Clutch Bag</p>
+                    <h1> Rp 4.000.000 IDR</h1>
+                </article>
+
+                <article class="catalog3d">
+                    <img src="image/tas3.png" alt="Medium amazona suade bag" width="240" height="300">
+                    <p>Essential Camera Leather Cross-Body Bag</p>
+                    <h1> Rp 10.900.000 IDR</h1>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="catalog4">
+            
+
+            <div class="cat4">
+                <article class="catalog4a">
+                    <img src="image/tas5.png" alt="Medium eclipse basket" width="240" height="300">
+                    <p>Loewe x Paula's Ibiza Puzzle Mini Leather Top-Handle Bag</p>
+                    <h1>Rp 15.770.000 IDR</h1>
+                    
+                    
+                </article>
+
+                <article class="catalog4b">
+                    <img src="image/tas6.png" alt="Small anagram basket bag" width="240" height="300">
+                    <p>Cala Raffia Mini Bag</p>
+                    <h1> Rp 53.950.000 IDR</h1>  
+                </article>
+
+                <article class="catalog4c">
+                    <img src="image/tas7.png" alt="Medium anagram basket bag" width="240" height="300">
+                    <p>Flamenco Leather Clutch Bag</p>
+                    <h1> Rp 10.999.000 IDR</h1>
+                </article>
+
+                <article class="catalog4d">
+                    <img src="image/tas8.png" alt="Large anagram basket bag" width="240" height="300">
+                    <p>Essential Camera Leather Cross-Body Bag</p>
+                    <h1> Rp 17.980.000 IDR</h1>
+                </article>
+            </div>
+        </section>
+
+
+
+
+        <section class="catalog5">
+            
+
+            <div class="cat5">
+                <article class="catalog5a">
+                    <img src="image/charm5.png" alt="Apple dice" width="240" height="300">
+                    <p>Loewe x Paula's Ibiza Puzzle Mini Leather Top-Handle Bag</p>
+                    <h1>Rp 15.770.000 IDR</h1>
+                    
+                    
+                </article>
+
+                <article class="catalog5b">
+                    <img src="image/charm6.png" alt="Apple charm in brass" width="240" height="300">
+                    <p>Cala Raffia Mini Bag</p>
+                    <h1> Rp 53.950.000 IDR</h1>  
+                </article>
+
+                <article class="catalog5c">
+                    <img src="image/charm7.png" alt="Loomie charm" width="240" height="300">
+                    <p>Flamenco Leather Clutch Bag</p>
+                    <h1> Rp 10.999.000 IDR</h1>
+                </article>
+
+                <article class="catalog5d">
+                    <img src="image/charm8.png" alt="Bloombee charm" width="240" height="300">
+                    <p>Essential Camera Leather Cross-Body Bag</p>
+                    <h1> Rp 17.980.000 IDR</h1>
+                </article>
+            </div>
+        </section>
+
+
+
+
+
+
+</main>
+            
+<script>
+
+function closecontact() {
+
+window.location.href="index.html";
+
+
+}
+
+</script>
+
+
+
+
+    
+</body>
+</html>
+
