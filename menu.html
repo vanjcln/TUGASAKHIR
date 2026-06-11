@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | Noiré</title>
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        .container{
+            display: flex;
+            width: 100dvw;
+            height: 100dvh;
+        }
+
+        /* PANEL MENU */
+
+        .menupanel{
+            width: 30%;
+            height: 100dvh;
+            background-color: white;
+            position: relative;
+        }
+
+        .menuatas{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-left: 35px;
+            margin-top: 35px;
+            margin-bottom: 50px;
+        }
+
+        .menuatas p{
+            margin: 0;
+            cursor: pointer;
+
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .menutengah{
+            display: flex;
+            flex-direction: column;
+
+            gap: 30px;
+            margin-left: 45px;
+        }
+
+        .menutengah a{
+            text-decoration: none;
+            color: black;
+
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            transition: color 0.5s;
+        }
+
+        .menutengah a:hover{
+            color: rgb(138, 92, 22);
+        }
+
+        .menubawah{
+            position: absolute;
+
+            bottom: 40px;
+            left: 45px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menubawah a{
+            text-decoration: none;
+            color: black;
+
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            transition: color 0.5s;
+        }
+
+        .menubawah a:hover{
+            color: rgb(138, 92, 22);
+        }
+
+        /* HOMEPAGE BACKGROUND */
+
+        .homepage{
+            width: 70%;
+            height: 100dvh;
+            position: relative;
+        }
+
+        .homepage img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0,0,0,0.45);
+        }
+
+        @media(max-width:768px){
+
+            .menupanel{
+                width: 80%;
+            }
+
+            .homepage{
+                display: none;
+            }
+
+        }
+
+        .search a{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="menupanel">
+
+            <div class="menuatas">
+
+                <p onclick="closeMenu()">
+                    ✕
+                </p>
+
+                <p onclick="closeMenu()">
+                    Close
+                </p>
+
+               <!-- <div class="search">
+                    <img src="image/search.png" alt="Search" height="16">
+                    <a href="search.html">Search</a>
+                </div> -->
+                
+                    
+                
+
+                
+
+            </div>
+
+            <div class="menutengah">
+
+                <a href="#">
+                    New Arrivals
+                </a>
+
+                <a href="#">
+                    Bags
+                </a>
+
+                <a href="#">
+                    Shoes
+                </a>
+
+                <a href="#">
+                    Charms
+                </a>
+
+                <a href="#">
+                    Clothes
+                </a>
+
+                <a href="#">
+                    Beauty
+                </a>
+
+                <a href="#">
+                    Perfumes
+                </a>
+
+            </div>
+
+            <div class="menubawah">
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Indonesia / English
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="homepage">
+
+            <img
+            src="image/headerpict.jpg"
+            alt="Noiré Homepage">
+
+            <div class="overlay"></div>
+
+        </section>
+
+    </div>
+
+    <script>
+
+        function closeMenu() {
+
+            window.location.href = "index.html";
+
+        }
+
+        
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Noiré</title>
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        .bg{
+            width: 100dvw;
+            height: 100dvh;
+            background-color: rgba(0, 0, 0, 0.021);
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .contactpanel{
+            width: 50%;
+            height: 100dvh;
+            background-color: white;
+            padding: 35px;
+            overflow-y: auto;
+        }
+
+        .atas{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .atas span{
+            font-size: 28px;
+            cursor: pointer;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .judul{
+            font-size: 32px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .menu1, .menu2, .menu3, .menu4{
+            border: 1px solid rgb(220,220,220);
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        
+
+
+        .menu1:hover, .menu2:hover, .menu3:hover, .menu4:hover{
+            background-color: rgb(245,245,245);
+        }
+
+        .menu1 p, .menu2 p, .menu3 p, .menu4 p{
+            margin: 0;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        }
+
+        #whatsapp{
+            display: none;
+        }
+
+        .judulwa{
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .boxwa{
+            background-color: rgb(245,245,245);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .boxwa img{
+            width: 220px;
+            margin-bottom: 20px;
+        }
+
+        .boxwa p{
+            font-size: 14px;
+            line-height: 1.8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .boxwa button{
+            background-color: rgb(138, 92, 22);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+        }
+
+        #emailpage{
+            display: none;
+        }
+
+        .emailtitle{
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .emailform{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .emailform input{
+            padding: 15px;
+            border: 1px solid rgb(220,220,220);
+            font-size: 14px;
+        }
+
+        .emailform textarea{
+            padding: 15px;
+            border: 1px solid rgb(220,220,220);
+            font-size: 14px;
+            height: 120px;
+            resize: none;
+        }
+
+        .emailform button{
+            width: 180px;
+            padding: 12px;
+            border: none;
+            background-color: rgb(138, 92, 22);
+            color: white;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        
+
+        .homepage{
+            width: 70%;
+            height: 100dvh;
+            position: relative;
+        }
+
+        .homepage img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0,0,0,0.45);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="bg">
+
+        <section class="homepage">
+
+            <img
+            src="image/headerpict.jpg"
+            alt="Noiré Homepage">
+
+            <div class="overlay"></div>
+
+        </section>
+
+        <section class="contactpanel">
+
+            <div class="atas">
+
+                <span id="back" onclick="backMenu()" style="display:none;">
+                    ←
+                </span>
+
+                <span onclick="closeContact()">
+                    ✖
+                </span>
+
+            </div>
+
+            <!-- bagian menu utama -->
+
+            <div id="menuutama">
+
+                <div class="judul">
+                    Client Service
+                </div>
+
+                <div class="menu1" onclick="openWhatsapp()">
+                    <p>WhatsApp</p>
+                </div>
+
+                <div class="menu2" onclick="openEmail()">
+                    <p>Send us an e-mail</p>
+                </div>
+
+                <div class="menu3">
+                    <p>Call us</p>
+                </div>
+
+                <div class="menu4">
+                    <p>Live Chat</p>
+                </div>
+
+            </div>
+
+            <!-- bagian wa -->
+
+            <div id="whatsapp">
+
+                <div class="judulwa">
+                    Connect to WhatsApp
+                </div>
+
+                <div class="boxwa">
+
+                    <img
+                    src="image/qr.jpg" alt="QR WhatsApp">
+
+                    <p>
+                        Scan the QR code with your smartphone
+                        to connect with our Client Service.
+                    </p>
+
+                    <button
+                    onclick="window.open('https://wa.me/628123456789')">
+                        WHATSAPP WEB
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Bagian email -->
+
+            <div id="emailpage">
+
+                <div class="emailtitle">
+                    Send us an e-mail
+                </div>
+
+                <form class="emailform">
+
+                    <input
+                    type="text"
+                    placeholder="Reason for Contact*"
+                    required>
+
+                    <input
+                    type="text"
+                    placeholder="First Name*"
+                    required>
+
+                    <input
+                    type="text"
+                    placeholder="Last Name*"
+                    required>
+
+                    <input
+                    type="email"
+                    placeholder="E-mail*"
+                    required>
+
+                    <input
+                    type="text"
+                    placeholder="Phone Number">
+
+                    <input
+                    type="text"
+                    placeholder="Subject*"
+                    required>
+
+                    <textarea
+                    placeholder="Additional Information*"
+                    required></textarea>
+
+                  
+
+                    
+
+                    <button type="submit">
+                        SUBMIT
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- <section class="homepage">
+
+            <img
+            src="image/headerpict.jpg"
+            alt="Noiré Homepage">
+
+            <div class="overlay"></div>
+
+        </section> -->
+
+    </div>
+
+    <script>
+
+        function openWhatsapp() {
+
+            document.getElementById("menuutama").style.display = "none";
+
+            document.getElementById("whatsapp").style.display = "block";
+
+            document.getElementById("emailpage").style.display = "none";
+
+            document.getElementById("back").style.display = "block";
+        }
+
+        function openEmail() {
+
+            document.getElementById("menuutama").style.display = "none";
+
+            document.getElementById("whatsapp").style.display = "none";
+
+            document.getElementById("emailpage").style.display = "block";
+
+            document.getElementById("back").style.display = "block";
+        }
+
+        function backMenu() {
+
+            document.getElementById("menuutama").style.display = "block";
+
+            document.getElementById("whatsapp").style.display = "none";
+
+            document.getElementById("emailpage").style.display = "none";
+
+            document.getElementById("back").style.display = "none";
+        }
+
+        function closeContact() {
+
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+
+</body>
+</html>
