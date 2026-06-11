@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Showing All Products</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ -->
 
 
 
@@ -17,12 +17,14 @@
 
 
 
+
  body{
         
         width: 100%;
         margin: 0;
         height: 390dvh;
     }
+
 
 
 header nav{
@@ -37,8 +39,10 @@ header nav{
         justify-content: space-between;
 
 
+
         
 }
+
 
 .navmid{
         position: absolute;
@@ -63,9 +67,10 @@ header nav{
     .caption1{
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 13px;
+            font-size: 20px;
             padding-top: 30px;
             padding-bottom: 30px;
+
 
 /* border-style: solid;
 border-color: black; */
@@ -77,12 +82,14 @@ margin-top: 50px;
 
         }
 
+
         .caption2{
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 13px;
+            font-size: 20px;
             padding-top: 30px;
             padding-bottom: 30px;
+
 
 /* border-style: solid;
 border-color: black; */
@@ -97,9 +104,18 @@ margin-bottom: 50px;
         .catalog{
             display: flex;
             gap: 90px;
-            margin-left: 20px;
+            margin-left: 140px;
             margin-bottom: 30px;
         }
+
+
+         .catalog2, .catalog3, .catalog4, .catalog5{
+            display: flex;
+            gap: 90px;
+            margin-left: 120px;
+            margin-bottom: 30px;
+        }
+
 
 
         .catalog h3{
@@ -124,6 +140,7 @@ margin-bottom: 50px;
             margin-left: 5px;
             margin-top: 0;
         }
+
 
 
 
@@ -160,23 +177,44 @@ margin-bottom: 50px;
         }
 
 
+
+        .close{
+
+
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
 </style>
 </head>
 
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <div class="close">
+    <span onclick="closecontact()" style="cursor:pointer;font-size:30px;">
+        ✕
+    </span>
+</div>
 
+<script>
+function closecontact(){
+    window.location.href="index.html";
+}
+</script>
+
+ 
 <main>
+
 
     <section class="caption1">
         <p>BAG & CHARM COLLECTION</p>
     </section>
 
+
     <section class="catalog">
         <article class="catalog1a">
             <img src="image/YML1.png" alt="Noiré Lumiere Luxury Handbag" width="240" height="300" loading="lazy">
-            <h3>Small Amazona bag in soft calfskin</h3>
+            <h3>Small Amazona 180 bag in soft calfskin</h3>
             <p>Rp 10.830.000 IDR</p>
         </article>
 
@@ -199,13 +237,14 @@ margin-bottom: 50px;
         </article>
         </section>
 
+
         <section class="catalog2">
             
 
             <div class="cat2">
                 <article class="catalog2a">
                     <img src="image/tasbotol.png" alt="The hammock in calfskin" width="240" height="300">
-                    <p>Prada x Monaco Painted bag</p>
+                    <p>Loewe x Paula's Ibiza Puzzle Mini </p>
                     <h1>Rp 15.670.000 IDR</h1>
                     
                     
@@ -234,13 +273,14 @@ margin-bottom: 50px;
 
 
 
+
         <section class="catalog3">
             
 
             <div class="cat3">
                 <article class="catalog3a">
                     <img src="image/tas4.png" alt="Medium suade loop hobo" width="240" height="300">
-                    <p>Loewe Party in Red</p>
+                    <p>Loewe x Paula's Ibiza Puzzle</p>
                     <h1>Rp 18.600.000 IDR</h1>
                     
                     
@@ -248,23 +288,24 @@ margin-bottom: 50px;
 
                 <article class="catalog3b">
                     <img src="image/tas1.png" alt="Large featherlight puzzle bag" width="240" height="300">
-                    <p>Loewe Party in Yellow</p>
+                    <p>Cala Raffia Mini Bag</p>
                     <h1> Rp 23.970.000 IDR</h1>  
                 </article>
 
                 <article class="catalog3c">
                     <img src="image/tas2.png" alt="Small flamenco bag" width="240" height="300">
-                    <p>Loewe Party in Black</p>
+                    <p>Flamenco Leather Clutch Bag</p>
                     <h1> Rp 4.000.000 IDR</h1>
                 </article>
 
                 <article class="catalog3d">
                     <img src="image/tas3.png" alt="Medium amazona suade bag" width="240" height="300">
-                    <p>Loewe Party in Brown</p>
+                    <p>Essential Camera Leather Cross-Body Bag</p>
                     <h1> Rp 10.900.000 IDR</h1>
                 </article>
             </div>
         </section>
+
 
 
         <section class="catalog4">
@@ -273,7 +314,7 @@ margin-bottom: 50px;
             <div class="cat4">
                 <article class="catalog4a">
                     <img src="image/tas5.png" alt="Medium eclipse basket" width="240" height="300">
-                    <p>Loewe x Dior Knitted bag</p>
+                    <p>Loewe x Paula's Leather Top-Handle Bag</p>
                     <h1>Rp 15.770.000 IDR</h1>
                     
                     
@@ -281,23 +322,24 @@ margin-bottom: 50px;
 
                 <article class="catalog4b">
                     <img src="image/tas6.png" alt="Small anagram basket bag" width="240" height="300">
-                    <p>Loewe x Prada Knitted bag</p>
+                    <p>Cala Raffia Mini Bag</p>
                     <h1> Rp 53.950.000 IDR</h1>  
                 </article>
 
                 <article class="catalog4c">
                     <img src="image/tas7.png" alt="Medium anagram basket bag" width="240" height="300">
-                    <p>Loewe x Songmont Knitted bag</p>
+                    <p>Flamenco Leather Clutch Bag</p>
                     <h1> Rp 10.999.000 IDR</h1>
                 </article>
 
                 <article class="catalog4d">
                     <img src="image/tas8.png" alt="Large anagram basket bag" width="240" height="300">
-                    <p>Loewe x Hermes Knitted bag</p>
+                    <p>Essential Camera Leather Cross-Body Bag</p>
                     <h1> Rp 17.980.000 IDR</h1>
                 </article>
             </div>
         </section>
+
 
 
 
@@ -308,7 +350,7 @@ margin-bottom: 50px;
             <div class="cat5">
                 <article class="catalog5a">
                     <img src="image/charm5.png" alt="Top-Handle Bag" width="240" height="300">
-                    <p>Top-Handle Charm</p>
+                    <p>Top-Handle Bag</p>
                     <h1>Rp 15.770.000 IDR</h1>
                     
                     
@@ -316,23 +358,24 @@ margin-bottom: 50px;
 
                 <article class="catalog5b">
                     <img src="image/charm6.png" alt="Raffia Mini Bag" width="240" height="300">
-                    <p>Raffia Mini Charm</p>
+                    <p>Raffia Mini Bag</p>
                     <h1> Rp 53.950.000 IDR</h1>  
                 </article>
 
                 <article class="catalog5c">
                     <img src="image/charm7.png" alt="Flamenco Clutch Bag" width="240" height="300">
-                    <p>Flamenco Clutch Charm</p>
+                    <p>Flamenco Clutch Bag</p>
                     <h1> Rp 10.999.000 IDR</h1>
                 </article>
 
                 <article class="catalog5d">
                     <img src="image/charm8.png" alt="Cross-Body Bag" width="240" height="300">
-                    <p>Cross-Body Charm</p>
+                    <p>Cross-Body Bag</p>
                     <h1> Rp 17.980.000 IDR</h1>
                 </article>
             </div>
         </section>
+
 
 
 
@@ -482,7 +525,7 @@ margin-bottom: 50px;
 
 
 
+
     
 </body>
 </html>
-
