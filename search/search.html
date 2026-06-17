@@ -12,7 +12,7 @@
         
             width: 100%;
             margin: 0;
-            height: 390dvh;
+            height: 350dvh;
         }
 
 
@@ -33,6 +33,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+         
             /* biar posisi logo ditengah */
         }
 /* 
@@ -52,16 +53,27 @@
         .caption1{
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 13px;
+            font-size: 15px;
+            margin-top: 50px;
             padding-top: 30px;
             padding-bottom: 30px;
         }
      
-        
         .catalog{
+
             display: flex;
             gap: 90px;
-            margin-left: 20px;
+            margin-left: 110px;
+            margin-bottom: 30px;
+
+        }
+
+
+
+         .catalog2, .catalog3, .catalog4, .catalog5{
+            display: flex;
+            gap: 90px;
+            margin-left: 100px;
             margin-bottom: 30px;
         }
 
@@ -124,7 +136,7 @@
         }
 
         .searchbar form{
-            width: 300px;
+            width: 205px;
             display: flex;
             align-items: center;
             border-bottom: 1px solid black;
@@ -144,7 +156,7 @@
             font-size: 20px;
             cursor: pointer;
             padding-bottom: 12px;
-            margin-left: 85px;
+            margin-left: 30px;
         }
 
         .searchbar{
@@ -162,6 +174,35 @@ text-decoration: none;
 
         }
 
+
+       .showall{
+            text-align: center;
+        }
+
+        .showall a{
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+            transition: color 0.5s, letter-spacing 0.5s, font-weight 0.5s, font-size 0.5s;
+        }
+
+        .showall a:hover{
+            color: rgb(138, 92, 22);
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+
+        
+        .close{
+
+
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+
 </style>
 
 
@@ -169,38 +210,10 @@ text-decoration: none;
 
 </head>
 <body>
-    
-
-    <!-- <span
-    onclick="closePromo()"
-    style="
-        position: absolute;
-        right: 18px;
-        top: 12px;
-        cursor: pointer;
-        font-size: 22px;
-    "
-    >&times;
-</span>
 
 
-<button
-onclick="closePromo()"
-style="
-    background: rgb(138, 92, 22);
-    color: white;
-    border: none;
-    padding: 11px 24px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 13px;
-"
->Shop Now</button>
-
- -->
-
-    </button>
-
+     
+   
 <nav>
 
     
@@ -221,23 +234,20 @@ style="
 </div>
 
     <div class="navkanan">
+    <div class="close">
+    <span onclick="closecontact()" style="cursor:pointer;font-size:30px;">
+        ✕
+        </span>
+            </div>
 
-                    <div class="close">
-                        <img src="image/close.png" alt="search bar" width="90" height="100">
-                        
-                       <!-- <span onclick="closecontact()">
+        <script>
+            function closecontact(){
+    window.location.href="index.html";
+        }
+        </script>
 
-                        ✕
+    
 
-                       </span> -->
-
-                
-                       <!-- <div class="search">
-                        <img src="image/search.webp" alt="Search" height="16"> -->
-                        <!-- <a href="index.html">X</a> -->
-                    <!-- </div> --> 
-
-                    </div>
                 </div>
 
                 <!-- <div class="navkiri">
@@ -416,6 +426,10 @@ style="
             </div>
         </section>
 
+<section class="showall">
+                <a href="showall.html">SHOW ALL SPRING COLLECTION</a>
+        </section>
+
 
 
 
@@ -440,4 +454,3 @@ window.location.href="index.html";
     
 </body>
 </html>
-
